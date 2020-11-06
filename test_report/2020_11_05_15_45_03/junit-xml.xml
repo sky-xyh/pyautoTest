@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="2" skipped="0" tests="2" time="114.975" timestamp="2020-11-05T15:45:03.432463" hostname="LAPTOP-N46K05E5"><testcase classname="test_dir.test_baidu.TestSearch" name="test_baidu_search_case" time="60.954"><failure message="AssertionError: assert 'pytestpytest_百度搜索' == 'pytest_百度搜索'&#10;  - pytest_百度搜索&#10;  + pytestpytest_百度搜索&#10;  ? ++++++">self = &lt;test_dir.test_baidu.TestSearch object at 0x0522D3B8&gt;, browser = &lt;selenium.webdriver.chrome.webdriver.WebDriver (session="525532d49ee0dcdd181575dc6fbb6aac")&gt;
+base_url = 'https://www.baidu.com'
+
+    def test_baidu_search_case(self,browser,base_url):
+        '''
+        名称：百度搜索"pytest"
+        步骤：
+        1.打开浏览器
+        2.输入关键字'pytest'
+        3.点击搜索按钮
+        检查点：
+        *检查页面标题是否包含关键字。*
+        '''
+        page = BaiduPage(browser)
+        page.get(base_url)
+        page.search_input="pytest"
+        page.search_button.click()
+        sleep(2)
+&gt;       assert browser.title == "pytest_百度搜索"
+E       AssertionError: assert 'pytestpytest_百度搜索' == 'pytest_百度搜索'
+E         - pytest_百度搜索
+E         + pytestpytest_百度搜索
+E         ? ++++++
+
+test_dir\test_baidu.py:26: AssertionError</failure></testcase><testcase classname="test_dir.test_baidu.TestSearch.TestSearchSettings" name="test_baidu_search_setting" time="50.167"><failure message="AttributeError: 'NoneType' object has no attribute 'click'">self = &lt;test_dir.test_baidu.TestSearch.TestSearchSettings object at 0x0525EC58&gt;, browser = &lt;selenium.webdriver.chrome.webdriver.WebDriver (session="2a180e8ffab1d3ac8079f218a4c1fdf7")&gt;
+base_url = 'https://www.baidu.com'
+
+    def test_baidu_search_setting(self, browser, base_url):
+        """
+        名称：百度搜索设置
+        步骤：
+        1、打开百度浏览器
+        2、点击设置链接
+        3、在下拉框中"选择搜索"
+        4、点击"保存设置"
+        5、对弹出警告框保存
+        检查点：
+        * 检查是否弹出提示框
+        """
+        page = BaiduPage(browser)
+        page.get(base_url)
+&gt;       page.settings.click()
+E       AttributeError: 'NoneType' object has no attribute 'click'
+
+test_dir\test_baidu.py:45: AttributeError</failure></testcase></testsuite></testsuites>
