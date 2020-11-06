@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="1" failures="0" skipped="0" tests="1" time="0.423" timestamp="2020-11-05T15:41:34.298055" hostname="LAPTOP-N46K05E5"><testcase classname="" name="test_dir.test_baidu" time="0.000"><error message="collection failure">D:\Program Files\python\lib\site-packages\poium\page_objects.py:126: in __init__
+    self.locator = (LOCATOR_LIST[self.k], self.v)
+E   KeyError: 'id'
+
+During handling of the above exception, another exception occurred:
+test_dir\test_baidu.py:7: in &lt;module&gt;
+    from page.baidu_page import BaiduPage
+page\baidu_page.py:3: in &lt;module&gt;
+    class BaiduPage(Page):
+page\baidu_page.py:7: in BaiduPage
+    settings = PageElement(id='s-usersetting-top',describe='设置下拉框')
+D:\Program Files\python\lib\site-packages\poium\page_objects.py:128: in __init__
+    raise FindElementTypesError("Element positioning of type '{}' is not supported. ".format(self.k))
+E   poium.common.exceptions.FindElementTypesError: Message: Element positioning of type 'id' is not supported.</error></testcase></testsuite></testsuites>

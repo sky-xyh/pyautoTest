@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="2" failures="0" skipped="0" tests="2" time="0.469" timestamp="2020-11-05T15:19:36.013253" hostname="LAPTOP-N46K05E5"><testcase classname="" name="test_dir.test_baidu" time="0.000"><error message="collection failure">D:\Program Files\python\lib\site-packages\poium\page_objects.py:126: in __init__
+    self.locator = (LOCATOR_LIST[self.k], self.v)
+E   KeyError: 'id'
+
+During handling of the above exception, another exception occurred:
+test_dir\test_baidu.py:7: in &lt;module&gt;
+    from page.baidu_page import BaiduPage
+page\baidu_page.py:3: in &lt;module&gt;
+    class BaiduPage(Page):
+page\baidu_page.py:7: in BaiduPage
+    settings = PageElement(id='s-usersetting-top',describe='设置下拉框')
+D:\Program Files\python\lib\site-packages\poium\page_objects.py:128: in __init__
+    raise FindElementTypesError("Element positioning of type '{}' is not supported. ".format(self.k))
+E   poium.common.exceptions.FindElementTypesError: Message: Element positioning of type 'id' is not supported.</error></testcase><testcase classname="pytest" name="internal" time="0.000"><error message="internal error">Traceback (most recent call last):
+  File "D:\Program Files\python\lib\site-packages\_pytest\main.py", line 257, in wrap_session
+    session.exitstatus = doit(config, session) or 0
+  File "D:\Program Files\python\lib\site-packages\_pytest\main.py", line 312, in _main
+    config.hook.pytest_collection(session=session)
+  File "D:\Program Files\python\lib\site-packages\pluggy\hooks.py", line 286, in __call__
+    return self._hookexec(self, self.get_hookimpls(), kwargs)
+  File "D:\Program Files\python\lib\site-packages\pluggy\manager.py", line 93, in _hookexec
+    return self._inner_hookexec(hook, methods, kwargs)
+  File "D:\Program Files\python\lib\site-packages\pluggy\manager.py", line 84, in &lt;lambda&gt;
+    self._inner_hookexec = lambda hook, methods, kwargs: hook.multicall(
+  File "D:\Program Files\python\lib\site-packages\pluggy\callers.py", line 208, in _multicall
+    return outcome.get_result()
+  File "D:\Program Files\python\lib\site-packages\pluggy\callers.py", line 80, in get_result
+    raise ex[1].with_traceback(ex[2])
+  File "D:\Program Files\python\lib\site-packages\pluggy\callers.py", line 187, in _multicall
+    res = hook_impl.function(*args)
+  File "D:\Program Files\python\lib\site-packages\_pytest\main.py", line 323, in pytest_collection
+    session.perform_collect()
+  File "D:\Program Files\python\lib\site-packages\_pytest\main.py", line 626, in perform_collect
+    self.items.extend(self.genitems(node))
+  File "D:\Program Files\python\lib\site-packages\_pytest\main.py", line 804, in genitems
+    node.ihook.pytest_collectreport(report=rep)
+  File "D:\Program Files\python\lib\site-packages\pluggy\hooks.py", line 286, in __call__
+    return self._hookexec(self, self.get_hookimpls(), kwargs)
+  File "D:\Program Files\python\lib\site-packages\pluggy\manager.py", line 93, in _hookexec
+    return self._inner_hookexec(hook, methods, kwargs)
+  File "D:\Program Files\python\lib\site-packages\pluggy\manager.py", line 84, in &lt;lambda&gt;
+    self._inner_hookexec = lambda hook, methods, kwargs: hook.multicall(
+  File "D:\Program Files\python\lib\site-packages\pluggy\callers.py", line 208, in _multicall
+    return outcome.get_result()
+  File "D:\Program Files\python\lib\site-packages\pluggy\callers.py", line 80, in get_result
+    raise ex[1].with_traceback(ex[2])
+  File "D:\Program Files\python\lib\site-packages\pluggy\callers.py", line 187, in _multicall
+    res = hook_impl.function(*args)
+  File "D:\Program Files\python\lib\site-packages\pytest_html\plugin.py", line 608, in pytest_collectreport
+    self.append_failed(report)
+  File "D:\Program Files\python\lib\site-packages\pytest_html\plugin.py", line 372, in append_failed
+    self._appendrow("Error", report)
+  File "D:\Program Files\python\lib\site-packages\pytest_html\plugin.py", line 340, in _appendrow
+    result = self.TestResult(outcome, report, self.logfile, self.config)
+  File "D:\Program Files\python\lib\site-packages\pytest_html\plugin.py", line 166, in __init__
+    self.config.hook.pytest_html_results_table_row(report=report, cells=cells)
+  File "D:\Program Files\python\lib\site-packages\pluggy\hooks.py", line 286, in __call__
+    return self._hookexec(self, self.get_hookimpls(), kwargs)
+  File "D:\Program Files\python\lib\site-packages\pluggy\manager.py", line 93, in _hookexec
+    return self._inner_hookexec(hook, methods, kwargs)
+  File "D:\Program Files\python\lib\site-packages\pluggy\manager.py", line 84, in &lt;lambda&gt;
+    self._inner_hookexec = lambda hook, methods, kwargs: hook.multicall(
+  File "D:\Program Files\python\lib\site-packages\pluggy\callers.py", line 208, in _multicall
+    return outcome.get_result()
+  File "D:\Program Files\python\lib\site-packages\pluggy\callers.py", line 80, in get_result
+    raise ex[1].with_traceback(ex[2])
+  File "D:\Program Files\python\lib\site-packages\pluggy\callers.py", line 187, in _multicall
+    res = hook_impl.function(*args)
+  File "D:\study\Python\AutoTest\pyautoTest\conftest.py", line 31, in pytest_html_results_table_row
+    cells.insert(2, html.td(report.description))
+AttributeError: 'CollectReport' object has no attribute 'description'</error></testcase></testsuite></testsuites>
